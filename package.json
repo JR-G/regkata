@@ -1,0 +1,54 @@
+{
+  "name": "regkata",
+  "version": "1.0.0",
+  "description": "Interactive CLI tool to learn regex through hands-on lessons",
+  "type": "module",
+  "bin": {
+    "regkata": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build ./src/cli.tsx --outdir ./dist --target node --format esm && chmod +x ./dist/cli.js",
+    "dev": "bun run src/cli.tsx",
+    "start": "bun run dist/cli.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "regex",
+    "cli",
+    "interactive",
+    "learning",
+    "tutorial",
+    "regular-expressions"
+  ],
+  "author": "James Glenn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JR-G/regkata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JR-G/regkata/issues"
+  },
+  "homepage": "https://github.com/JR-G/regkata#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "conf": "^13.0.1",
+    "figures": "^6.1.0",
+    "ink": "^5.0.1",
+    "ink-select-input": "^6.0.0",
+    "ink-text-input": "^6.0.0",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "react-devtools-core": "^7.0.1",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
