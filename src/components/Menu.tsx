@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Box, Text } from 'ink';
 import SelectInput from 'ink-select-input';
+import { ShimmerText } from './ShimmerText.js';
 import { lessons, getLesson } from '../lessons/index.js';
 import { getProgress } from '../store.js';
 import type { Lesson } from '../types.js';
@@ -72,9 +73,7 @@ export const Menu = ({ onSelectLesson, onExit }: MenuProps) => {
   return (
     <Box flexDirection="column" padding={1}>
       <Box marginBottom={1}>
-        <Text bold color="cyan">
-          REGKATA - Lesson Menu
-        </Text>
+        <ShimmerText>REGKATA - Lesson Menu</ShimmerText>
       </Box>
       {progress.completedLessons.length > 0 && (
         <Box marginBottom={1}>
