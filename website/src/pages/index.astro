@@ -1,0 +1,411 @@
+---
+const title = "regkata - Master Regular Expressions Through Practice";
+const description = "Interactive CLI tool to learn regex through hands-on lessons. Train like a martial artist with progressive challenges, instant feedback, and progress tracking.";
+const siteUrl = "https://jr-g.github.io/regkata";
+const ogImage = `${siteUrl}/og-image.png`;
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "SoftwareApplication",
+	"name": "regkata",
+	"description": description,
+	"applicationCategory": "DeveloperApplication",
+	"operatingSystem": "Linux, macOS, Windows",
+	"offers": {
+		"@type": "Offer",
+		"price": "0",
+		"priceCurrency": "USD"
+	},
+	"author": {
+		"@type": "Person",
+		"name": "James Glenn"
+	},
+	"url": siteUrl,
+	"downloadUrl": "https://www.npmjs.com/package/regkata",
+	"softwareVersion": "1.0.2",
+	"keywords": "regex, regular expressions, learn regex, regex tutorial, cli tool, interactive learning"
+};
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={siteUrl} />
+
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={siteUrl} />
+		<meta property="og:image" content={ogImage} />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+
+		<meta name="keywords" content="regex, regular expressions, learn regex, regex tutorial, cli tool, interactive learning, regex practice" />
+
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+	</head>
+	<body>
+		<main>
+			<section class="hero">
+				<div class="container">
+					<h1 class="title">
+						<span class="gradient-text">regkata</span>
+					</h1>
+					<p class="tagline">Master Regular Expressions Through Practice</p>
+					<p class="subtitle">
+						Learn regex the way martial artists learn moves—through deliberate practice and progressive challenges.
+					</p>
+
+					<div class="cta">
+						<pre class="install-cmd">npm install -g regkata</pre>
+						</div>
+
+					<div class="quick-start">
+						<p>Then start training:</p>
+						<pre class="run-cmd">regkata</pre>
+					</div>
+				</div>
+			</section>
+
+			<section class="features">
+				<div class="container">
+					<h2>Why regkata?</h2>
+					<p class="section-intro">
+						Regular expressions are powerful but intimidating. Most tutorials throw syntax at you and hope it sticks.
+						regkata takes a different approach: <strong>learn by doing</strong>.
+					</p>
+
+					<div class="feature-grid">
+						<div class="feature">
+							<div class="feature-icon">✨</div>
+							<h3>15 Progressive Lessons</h3>
+							<p>From literal characters to complex patterns, master regex step by step</p>
+						</div>
+
+						<div class="feature">
+							<div class="feature-icon">🎯</div>
+							<h3>Real-time Validation</h3>
+							<p>Test your regex against multiple cases instantly with immediate feedback</p>
+						</div>
+
+						<div class="feature">
+							<div class="feature-icon">💾</div>
+							<h3>Progress Tracking</h3>
+							<p>Pick up exactly where you left off, skip completed lessons</p>
+						</div>
+
+						<div class="feature">
+							<div class="feature-icon">💡</div>
+							<h3>Hint System</h3>
+							<p>Stuck? Type <code>?</code> for guidance on any lesson</p>
+						</div>
+
+						<div class="feature">
+							<div class="feature-icon">🎨</div>
+							<h3>Beautiful CLI</h3>
+							<p>Clean, colorful interface built with React and Ink</p>
+						</div>
+
+						<div class="feature">
+							<div class="feature-icon">⚡</div>
+							<h3>Lightning Fast</h3>
+							<p>Powered by Bun for instant startup and smooth experience</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="lessons">
+				<div class="container">
+					<h2>What You'll Learn</h2>
+					<div class="lesson-list">
+						<div class="lesson-item">1. Literal Characters → Match exact text</div>
+						<div class="lesson-item">2. The Dot Metacharacter → Match any character</div>
+						<div class="lesson-item">3. Character Classes → Match sets of characters</div>
+						<div class="lesson-item">4. Character Ranges → Match ranges like [0-9]</div>
+						<div class="lesson-item">5. Negated Character Classes → Match anything BUT these</div>
+						<div class="lesson-item">6. Shorthand Character Classes → \\w, \\d, \\s shortcuts</div>
+						<div class="lesson-item">7. The Plus Quantifier → Match one or more</div>
+						<div class="lesson-item">8. The Star Quantifier → Match zero or more</div>
+						<div class="lesson-item">9. The Question Mark → Make optional</div>
+						<div class="lesson-item">10. Anchors - Start → ^ matches string start</div>
+						<div class="lesson-item">11. Anchors - End → $ matches string end</div>
+						<div class="lesson-item">12. Word Boundaries → \\b matches word edges</div>
+						<div class="lesson-item">13. Alternation → Match this OR that</div>
+						<div class="lesson-item">14. Grouping → Combine patterns</div>
+						<div class="lesson-item">15. Escaping Special Chars → Match literal . ? * etc.</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="links">
+				<div class="container">
+					<div class="link-buttons">
+						<a href="https://github.com/JR-G/regkata" class="button">View on GitHub</a>
+						<a href="https://www.npmjs.com/package/regkata" class="button">View on npm</a>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<p>MIT © James Glenn</p>
+				<p>Train your regex skills, one pattern at a time.</p>
+			</div>
+		</footer>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				--cyan: #00d9ff;
+				--magenta: #ff006e;
+				--yellow: #ffbe0b;
+				--bg: #0a0a0f;
+				--text: #e0e0e0;
+				--text-dim: #a0a0a0;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+				background: var(--bg);
+				color: var(--text);
+				line-height: 1.6;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
+
+			main {
+				min-height: 100vh;
+			}
+
+			section {
+				padding: 4rem 0;
+			}
+
+			.hero {
+				padding: 6rem 0 4rem;
+				text-align: center;
+			}
+
+			.title {
+				font-size: clamp(3rem, 8vw, 5rem);
+				font-weight: 900;
+				margin-bottom: 1rem;
+				letter-spacing: -0.02em;
+			}
+
+			.gradient-text {
+				background: linear-gradient(135deg, var(--cyan), var(--magenta), var(--yellow));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				animation: shimmer 3s ease-in-out infinite;
+				background-size: 200% 200%;
+			}
+
+			@keyframes shimmer {
+				0%, 100% { background-position: 0% 50%; }
+				50% { background-position: 100% 50%; }
+			}
+
+			.tagline {
+				font-size: 1.5rem;
+				color: var(--cyan);
+				margin-bottom: 1rem;
+			}
+
+			.subtitle {
+				font-size: 1.2rem;
+				color: var(--text-dim);
+				max-width: 600px;
+				margin: 0 auto 3rem;
+			}
+
+			.cta {
+				margin: 2rem auto;
+				max-width: 600px;
+			}
+
+			.install-cmd, .run-cmd {
+				background: #1a1a2e;
+				color: var(--cyan);
+				padding: 1.5rem 2rem;
+				border-radius: 0.5rem;
+				font-size: 1.2rem;
+				font-family: 'Monaco', 'Courier New', monospace;
+				border: 2px solid var(--cyan);
+				margin: 1rem 0;
+				overflow-x: auto;
+			}
+
+			.quick-start {
+				margin-top: 3rem;
+				max-width: 600px;
+				margin: 3rem auto 0;
+			}
+
+			.quick-start p {
+				color: var(--text-dim);
+				margin-bottom: 0.5rem;
+			}
+
+			.features {
+				background: linear-gradient(180deg, transparent, rgba(0, 217, 255, 0.05), transparent);
+			}
+
+			h2 {
+				font-size: 2.5rem;
+				text-align: center;
+				margin-bottom: 2rem;
+				color: var(--cyan);
+			}
+
+			.section-intro {
+				text-align: center;
+				max-width: 800px;
+				margin: 0 auto 3rem;
+				font-size: 1.1rem;
+				color: var(--text-dim);
+			}
+
+			.feature-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+				margin-top: 3rem;
+			}
+
+			.feature {
+				padding: 2rem;
+				background: #1a1a2e;
+				border-radius: 0.5rem;
+				border: 1px solid rgba(0, 217, 255, 0.2);
+				transition: all 0.3s ease;
+			}
+
+			.feature:hover {
+				border-color: var(--cyan);
+				transform: translateY(-4px);
+			}
+
+			.feature-icon {
+				font-size: 2.5rem;
+				margin-bottom: 1rem;
+			}
+
+			.feature h3 {
+				font-size: 1.3rem;
+				margin-bottom: 0.5rem;
+				color: var(--text);
+			}
+
+			.feature p {
+				color: var(--text-dim);
+			}
+
+			.lessons {
+				background: #0f0f14;
+			}
+
+			.lesson-list {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-auto-flow: column;
+				grid-template-rows: repeat(8, auto);
+				gap: 1rem;
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+
+			.lesson-item {
+				padding: 1rem 1.5rem;
+				background: #1a1a2e;
+				border-left: 3px solid var(--cyan);
+				border-radius: 0.25rem;
+				font-family: 'Monaco', 'Courier New', monospace;
+				font-size: 0.9rem;
+			}
+
+			.links {
+				text-align: center;
+			}
+
+			.link-buttons {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			.button {
+				display: inline-block;
+				padding: 1rem 2rem;
+				background: var(--cyan);
+				color: var(--bg);
+				text-decoration: none;
+				border-radius: 0.5rem;
+				font-weight: 600;
+				transition: all 0.3s ease;
+			}
+
+			.button:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 10px 20px rgba(0, 217, 255, 0.3);
+			}
+
+			footer {
+				background: #0f0f14;
+				padding: 2rem 0;
+				text-align: center;
+				color: var(--text-dim);
+				border-top: 1px solid rgba(0, 217, 255, 0.2);
+			}
+
+			footer p {
+				margin: 0.5rem 0;
+			}
+
+			@media (max-width: 768px) {
+				.container {
+					padding: 0 1rem;
+				}
+
+				section {
+					padding: 3rem 0;
+				}
+
+				.hero {
+					padding: 4rem 0 3rem;
+				}
+
+				.feature-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.lesson-list {
+					grid-template-columns: 1fr;
+					grid-auto-flow: row;
+				}
+			}
+		</style>
+	</body>
+</html>
