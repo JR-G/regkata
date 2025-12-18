@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jr-g.github.io',
-  base: '/regkata',
+  site: 'https://regkata.com',
+  base: '/',
   integrations: [sitemap()],
 });

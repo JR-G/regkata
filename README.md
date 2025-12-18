@@ -10,7 +10,8 @@ Regular expressions are powerful but intimidating. Most tutorials throw syntax a
 
 ## Features
 
-- ✨ **15 Progressive Lessons** - From literal characters to complex patterns
+- ✨ **22 Progressive Lessons** - From fundamentals to real-world applications
+- 🥋 **Belt System** - White Belt (core patterns) → Yellow Belt (practical challenges)
 - 🎯 **Real-time Validation** - Test your regex against multiple cases instantly
 - 💾 **Progress Tracking** - Pick up exactly where you left off
 - 💡 **Hint System** - Stuck? Type `?` for guidance
@@ -55,6 +56,9 @@ Your progress is automatically saved. When you return:
 
 ## What You'll Learn
 
+### ⬜ White Belt - Fundamentals
+Master the core regex patterns and syntax
+
 ```
 Lesson  1: Literal Characters         →  Match exact text
 Lesson  2: The Dot Metacharacter      →  Match any character
@@ -71,6 +75,19 @@ Lesson 12: Word Boundaries            →  \b matches word edges
 Lesson 13: Alternation                →  Match this OR that
 Lesson 14: Grouping                   →  Combine patterns
 Lesson 15: Escaping Special Chars     →  Match literal . ? * etc.
+```
+
+### 🟨 Yellow Belt - Real World
+Apply regex to practical challenges and data extraction
+
+```
+Lesson 16: Extract IPv4 Addresses     →  Parse server logs
+Lesson 17: Extract Email Addresses    →  Find emails in text
+Lesson 18: Extract URLs               →  Match HTTP/HTTPS links
+Lesson 19: Parse Dates                →  MM/DD/YYYY format
+Lesson 20: Extract Phone Numbers      →  US XXX-XXX-XXXX format
+Lesson 21: Extract Hashtags           →  Social media tags
+Lesson 22: Parse Hex Colors           →  #RGB and #RRGGBB
 ```
 
 ## Development
