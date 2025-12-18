@@ -6,6 +6,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Literal Characters',
     description: 'Match the exact word "cat" in the text',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'cat', shouldMatch: true },
       { input: 'dog', shouldMatch: false },
@@ -21,6 +22,7 @@ export const lessons: readonly Lesson[] = [
     title: 'The Dot Metacharacter',
     description: 'Match "c", any single character, then "t" (like cat, cot, cut)',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'cat', shouldMatch: true },
       { input: 'cot', shouldMatch: true },
@@ -36,6 +38,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Character Classes',
     description: 'Match "cat" or "bat" (but not "rat")',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'cat', shouldMatch: true },
       { input: 'bat', shouldMatch: true },
@@ -51,6 +54,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Character Ranges',
     description: 'Match any single digit (0-9)',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: '5', shouldMatch: true },
       { input: 'a', shouldMatch: false },
@@ -66,6 +70,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Negated Character Classes',
     description: 'Match any character that is NOT a vowel (aeiou)',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'b', shouldMatch: true },
       { input: 'a', shouldMatch: false },
@@ -81,6 +86,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Shorthand Character Classes',
     description: 'Match any word character (letter, digit, or underscore)',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'a', shouldMatch: true },
       { input: '5', shouldMatch: true },
@@ -96,6 +102,7 @@ export const lessons: readonly Lesson[] = [
     title: 'The Plus Quantifier',
     description: 'Match one or more digits in a row',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: '123', shouldMatch: true },
       { input: '5', shouldMatch: true },
@@ -111,6 +118,7 @@ export const lessons: readonly Lesson[] = [
     title: 'The Star Quantifier',
     description: 'Match "go" followed by zero or more "o"s (go, goo, gooo)',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'go', shouldMatch: true },
       { input: 'goo', shouldMatch: true },
@@ -126,6 +134,7 @@ export const lessons: readonly Lesson[] = [
     title: 'The Question Mark Quantifier',
     description: 'Match "color" or "colour" (u is optional)',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'color', shouldMatch: true },
       { input: 'colour', shouldMatch: true },
@@ -141,6 +150,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Anchors - Start of String',
     description: 'Match "cat" only at the start of the string',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'cat', shouldMatch: true },
       { input: 'category', shouldMatch: true },
@@ -156,6 +166,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Anchors - End of String',
     description: 'Match "end" only at the end of the string',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'end', shouldMatch: true },
       { input: 'the end', shouldMatch: true },
@@ -171,6 +182,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Word Boundaries',
     description: 'Match the word "cat" as a complete word (not in "catch" or "scat")',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'cat', shouldMatch: true },
       { input: 'the cat', shouldMatch: true },
@@ -186,6 +198,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Alternation',
     description: 'Match "cat" or "dog"',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'cat', shouldMatch: true },
       { input: 'dog', shouldMatch: true },
@@ -201,6 +214,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Grouping',
     description: 'Match "re" followed by one or more of "pe" or "de"',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: 'repeat', shouldMatch: true },
       { input: 'repent', shouldMatch: true },
@@ -216,6 +230,7 @@ export const lessons: readonly Lesson[] = [
     title: 'Escaping Special Characters',
     description: 'Match a literal dot "." character',
     type: 'match',
+    belt: 'white',
     testCases: [
       { input: '.', shouldMatch: true },
       { input: 'a', shouldMatch: false },
@@ -225,6 +240,118 @@ export const lessons: readonly Lesson[] = [
     ],
     hint: 'Use backslash \\ to escape special characters',
     solution: '\\.',
+  },
+  {
+    id: 16,
+    title: 'Extract IPv4 Addresses',
+    description: 'Extract valid IPv4 addresses from server logs (simplified - just pattern match)',
+    type: 'match',
+    belt: 'yellow',
+    testCases: [
+      { input: '192.168.1.1 - GET /index.html', shouldMatch: true },
+      { input: '10.0.0.255 - POST /api/users', shouldMatch: true },
+      { input: '127.0.0.1 - ERROR 404', shouldMatch: true },
+      { input: 'No IP address here', shouldMatch: false },
+      { input: '172.16.254.1 connected', shouldMatch: true },
+    ],
+    hint: 'Match 1-3 digits, then dot, repeated 4 times. Use \\d{1,3} for digits',
+    solution: '\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}',
+  },
+  {
+    id: 17,
+    title: 'Extract Email Addresses',
+    description: 'Match email addresses (simplified pattern)',
+    type: 'match',
+    belt: 'yellow',
+    testCases: [
+      { input: 'Contact me at user@example.com', shouldMatch: true },
+      { input: 'admin@site.org is the admin', shouldMatch: true },
+      { input: 'invalid.email.com', shouldMatch: false },
+      { input: 'test_user@domain.co.uk works', shouldMatch: true },
+      { input: 'no email here', shouldMatch: false },
+    ],
+    hint: 'word chars + @ + word chars + dot + word chars. Remember \\w for word characters',
+    solution: '\\w+@\\w+\\.\\w+',
+  },
+  {
+    id: 18,
+    title: 'Extract URLs',
+    description: 'Match HTTP/HTTPS URLs',
+    type: 'match',
+    belt: 'yellow',
+    testCases: [
+      { input: 'Visit https://example.com for more', shouldMatch: true },
+      { input: 'Check out http://site.org', shouldMatch: true },
+      { input: 'ftp://wrong.com should not match', shouldMatch: false },
+      { input: 'https://github.com/user/repo', shouldMatch: true },
+      { input: 'no url here', shouldMatch: false },
+    ],
+    hint: 'Match http OR https, then ://, then word chars/dots/slashes. Use (http|https)',
+    solution: '(http|https)://[\\w./]+',
+  },
+  {
+    id: 19,
+    title: 'Parse Dates (MM/DD/YYYY)',
+    description: 'Match dates in MM/DD/YYYY format',
+    type: 'match',
+    belt: 'yellow',
+    testCases: [
+      { input: 'Event on 12/25/2024', shouldMatch: true },
+      { input: 'Born on 01/15/1990', shouldMatch: true },
+      { input: 'Invalid date format 2024-12-25', shouldMatch: false },
+      { input: 'Meeting: 06/30/2025 at noon', shouldMatch: true },
+      { input: 'No date in this text', shouldMatch: false },
+    ],
+    hint: 'Match 2 digits, slash, 2 digits, slash, 4 digits. Use \\d{2} and \\d{4}',
+    solution: '\\d{2}/\\d{2}/\\d{4}',
+  },
+  {
+    id: 20,
+    title: 'Extract Phone Numbers',
+    description: 'Match US phone numbers (XXX-XXX-XXXX)',
+    type: 'match',
+    belt: 'yellow',
+    testCases: [
+      { input: 'Call me at 555-123-4567', shouldMatch: true },
+      { input: 'Office: 800-555-0199', shouldMatch: true },
+      { input: 'Invalid 12345', shouldMatch: false },
+      { input: 'Mobile 415-867-5309', shouldMatch: true },
+      { input: 'No phone number', shouldMatch: false },
+    ],
+    hint: 'Match 3 digits, dash, 3 digits, dash, 4 digits',
+    solution: '\\d{3}-\\d{3}-\\d{4}',
+  },
+  {
+    id: 21,
+    title: 'Extract Hashtags',
+    description: 'Match social media hashtags',
+    type: 'match',
+    belt: 'yellow',
+    testCases: [
+      { input: 'Love this #regex tutorial', shouldMatch: true },
+      { input: '#coding is fun #development', shouldMatch: true },
+      { input: 'No hashtags here', shouldMatch: false },
+      { input: 'Check out #JavaScript_2024', shouldMatch: true },
+      { input: 'Just a # symbol', shouldMatch: false },
+    ],
+    hint: 'Match # followed by one or more word characters',
+    solution: '#\\w+',
+  },
+  {
+    id: 22,
+    title: 'Parse Hex Colors',
+    description: 'Match hex color codes (#RGB or #RRGGBB)',
+    type: 'match',
+    belt: 'yellow',
+    testCases: [
+      { input: 'Primary color: #ff0000', shouldMatch: true },
+      { input: 'Use #fff for white', shouldMatch: true },
+      { input: 'Border color #a1b2c3', shouldMatch: true },
+      { input: 'Invalid color rgb(255,0,0)', shouldMatch: false },
+      { input: 'Background: #123', shouldMatch: true },
+    ],
+    hint: 'Match # followed by exactly 3 or 6 hex digits [0-9a-fA-F]. Use {3} or {6}',
+    solution: '#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?',
   },
 ] as const;
 

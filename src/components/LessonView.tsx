@@ -42,11 +42,14 @@ export const LessonView = ({ lesson, onComplete, onExit }: LessonViewProps) => {
     }
   };
 
+  const beltColor = lesson.belt === 'white' ? 'cyan' : 'yellow';
+  const beltLabel = lesson.belt === 'white' ? 'White Belt' : 'Yellow Belt';
+
   return (
     <Box flexDirection="column" padding={1}>
       <Box marginBottom={1}>
-        <Text bold color="cyan">
-          Lesson {lesson.id}: {lesson.title}
+        <Text bold color={beltColor}>
+          [{beltLabel}] Lesson {lesson.id}: {lesson.title}
         </Text>
       </Box>
 

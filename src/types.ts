@@ -1,4 +1,5 @@
 export type LessonType = 'match' | 'capture' | 'replace';
+export type Belt = 'white' | 'yellow';
 
 export interface TestCase {
   readonly input: string;
@@ -11,6 +12,7 @@ export interface Lesson {
   readonly title: string;
   readonly description: string;
   readonly type: LessonType;
+  readonly belt: Belt;
   readonly testCases: readonly TestCase[];
   readonly hint?: string;
   readonly solution: string;

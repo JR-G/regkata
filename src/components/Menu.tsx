@@ -24,13 +24,24 @@ export const Menu = ({ onSelectLesson, onExit }: MenuProps) => {
     lesson => !progress.completedLessons.includes(lesson.id)
   );
 
+  const whiteBeltLessons = lessons.filter(lesson => lesson.belt === 'white');
+  const yellowBeltLessons = lessons.filter(lesson => lesson.belt === 'yellow');
+
   const items: MenuItem[] = showAll
-    ? lessons.map(lesson => ({
-        label: `${lesson.id}. ${lesson.title} ${
-          progress.completedLessons.includes(lesson.id) ? '✓' : ''
-        }`,
-        value: `lesson-${lesson.id}`,
-      }))
+    ? [
+        ...whiteBeltLessons.map(lesson => ({
+          label: `${lesson.id}. ${lesson.title} ${
+            progress.completedLessons.includes(lesson.id) ? '✓' : ''
+          }`,
+          value: `lesson-${lesson.id}`,
+        })),
+        ...yellowBeltLessons.map(lesson => ({
+          label: `${lesson.id}. ${lesson.title} ${
+            progress.completedLessons.includes(lesson.id) ? '✓' : ''
+          }`,
+          value: `lesson-${lesson.id}`,
+        })),
+      ]
     : [
         ...(nextLesson
           ? [
@@ -81,6 +92,16 @@ export const Menu = ({ onSelectLesson, onExit }: MenuProps) => {
             Progress: {progress.completedLessons.length}/{lessons.length} lessons
             completed
           </Text>
+        </Box>
+      )}
+      {showAll && (
+        <Box flexDirection="column" marginBottom={1}>
+          <Text bold color="cyan">White Belt - Fundamentals</Text>
+          <Text color="gray">Lessons 1-15: Core regex patterns</Text>
+          <Box marginTop={1}>
+            <Text bold color="yellow">Yellow Belt - Real World</Text>
+          </Box>
+          <Text color="gray">Lessons 16-22: Practical applications</Text>
         </Box>
       )}
       <SelectInput items={items} onSelect={handleSelect} />
