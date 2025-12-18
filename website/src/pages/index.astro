@@ -22,7 +22,7 @@ const structuredData = {
 	},
 	"url": siteUrl,
 	"downloadUrl": "https://www.npmjs.com/package/regkata",
-	"softwareVersion": "1.0.2",
+	"softwareVersion": "1.1.0",
 	"keywords": "regex, regular expressions, learn regex, regex tutorial, cli tool, interactive learning"
 };
 ---
@@ -87,8 +87,8 @@ const structuredData = {
 					<div class="feature-grid">
 						<div class="feature">
 							<div class="feature-icon">✨</div>
-							<h3>15 Progressive Lessons</h3>
-							<p>From literal characters to complex patterns, master regex step by step</p>
+							<h3>22 Progressive Lessons</h3>
+							<p>From fundamentals to real-world applications, master regex step by step</p>
 						</div>
 
 						<div class="feature">
@@ -127,6 +127,9 @@ const structuredData = {
 			<section class="lessons">
 				<div class="container">
 					<h2>What You'll Learn</h2>
+
+					<h3 class="belt-heading">⬜ White Belt - Fundamentals</h3>
+					<p class="belt-description">Master the core regex patterns and syntax</p>
 					<div class="lesson-list">
 						<div class="lesson-item">1. Literal Characters → Match exact text</div>
 						<div class="lesson-item">2. The Dot Metacharacter → Match any character</div>
@@ -143,6 +146,18 @@ const structuredData = {
 						<div class="lesson-item">13. Alternation → Match this OR that</div>
 						<div class="lesson-item">14. Grouping → Combine patterns</div>
 						<div class="lesson-item">15. Escaping Special Chars → Match literal . ? * etc.</div>
+					</div>
+
+					<h3 class="belt-heading">🟨 Yellow Belt - Real World</h3>
+					<p class="belt-description">Apply regex to practical challenges and data extraction</p>
+					<div class="lesson-list">
+						<div class="lesson-item">16. Extract IPv4 Addresses → Parse server logs</div>
+						<div class="lesson-item">17. Extract Email Addresses → Find emails in text</div>
+						<div class="lesson-item">18. Extract URLs → Match HTTP/HTTPS links</div>
+						<div class="lesson-item">19. Parse Dates → MM/DD/YYYY format</div>
+						<div class="lesson-item">20. Extract Phone Numbers → US XXX-XXX-XXXX format</div>
+						<div class="lesson-item">21. Extract Hashtags → Social media tags</div>
+						<div class="lesson-item">22. Parse Hex Colors → #RGB and #RRGGBB</div>
 					</div>
 				</div>
 			</section>
@@ -324,6 +339,21 @@ const structuredData = {
 
 			.lessons {
 				background: #0f0f14;
+			}
+
+			.belt-heading {
+				font-size: 1.8rem;
+				margin-top: 3rem;
+				margin-bottom: 0.5rem;
+				color: var(--cyan);
+				text-align: center;
+			}
+
+			.belt-description {
+				text-align: center;
+				color: var(--text-dim);
+				margin-bottom: 2rem;
+				font-size: 1.1rem;
 			}
 
 			.lesson-list {
