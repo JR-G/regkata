@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/JR-G/regkata/issues"
   },
-  "homepage": "https://github.com/JR-G/regkata#readme",
+  "homepage": "https://regkata.com",
   "dependencies": {
     "chalk": "^5.3.0",
     "conf": "^13.0.1",
