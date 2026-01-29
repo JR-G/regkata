@@ -1,6 +1,6 @@
 {
   "name": "regkata",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Interactive CLI tool to learn regex through hands-on lessons",
   "type": "module",
   "bin": {
