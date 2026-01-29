@@ -1,98 +1,49 @@
 # regkata
 
-> Master regular expressions through practice, one kata at a time.
+A small, hands-on CLI for learning regular expressions. It works like a kata: short lessons, immediate feedback, repeat.
 
-An interactive CLI tool that teaches you regex the way martial artists learn moves—through deliberate practice and progressive challenges. Inspired by vimtutor, regkata guides you from regex basics to advanced patterns with hands-on lessons.
+## Why it exists
 
-## Why regkata?
+Regex is best learned by doing, not by skimming a cheat sheet. regkata gives you a prompt, test cases, and a place to try patterns until they click.
 
-Regular expressions are powerful but intimidating. Most tutorials throw syntax at you and hope it sticks. regkata takes a different approach: learn by doing. Each lesson presents a challenge, you write the regex, and get instant feedback. No copy-paste, no passive reading—just you and the pattern.
-
-## Features
-
-- ✨ **22 Progressive Lessons** - From fundamentals to real-world applications
-- 🥋 **Belt System** - White Belt (core patterns) → Yellow Belt (practical challenges)
-- 🎯 **Real-time Validation** - Test your regex against multiple cases instantly
-- 💾 **Progress Tracking** - Pick up exactly where you left off
-- 💡 **Hint System** - Stuck? Type `?` for guidance
-- 🎨 **Beautiful CLI** - Clean, colorful interface built with React
-- ⚡ **Lightning Fast** - Powered by Bun for instant startup
-
-## Installation
-
-Install globally with Bun:
+## Install
 
 ```bash
 bun install -g regkata
 ```
 
-Or with npm:
+Or:
 
 ```bash
 npm install -g regkata
 ```
 
-## Usage
-
-Start your training:
+## Run
 
 ```bash
 regkata
 ```
 
-### Controls
+## Controls
 
-- **Arrow keys** - Navigate menu options
-- **Enter** - Submit your regex or select a lesson
-- **`?`** - Show hint for the current lesson
-- **`exit`** - Return to menu
+- Arrow keys: select a lesson
+- Enter: submit your regex
+- `?`: show hint
+- `exit`: return to menu
 
-### Learning Path
+## What you get
 
-Your progress is automatically saved. When you return:
-- ✓ Completed lessons are marked
-- Resume from where you left off
-- Or jump to any lesson to review
+- 26 lessons, ordered from fundamentals to practical patterns
+- White Belt fundamentals, Yellow Belt real‑world patterns, Orange Belt advanced drills
+- Instant feedback against multiple test cases
+- Progress saved between sessions
+- Clean, readable CLI built with Ink
 
-## What You'll Learn
+## Lessons
 
-### ⬜ White Belt - Fundamentals
-Master the core regex patterns and syntax
-
-```
-Lesson  1: Literal Characters         →  Match exact text
-Lesson  2: The Dot Metacharacter      →  Match any character
-Lesson  3: Character Classes          →  Match sets of characters
-Lesson  4: Character Ranges           →  Match ranges like [0-9]
-Lesson  5: Negated Character Classes  →  Match anything BUT these
-Lesson  6: Shorthand Character Classes →  \w, \d, \s shortcuts
-Lesson  7: The Plus Quantifier        →  Match one or more
-Lesson  8: The Star Quantifier        →  Match zero or more
-Lesson  9: The Question Mark          →  Make optional
-Lesson 10: Anchors - Start            →  ^ matches string start
-Lesson 11: Anchors - End              →  $ matches string end
-Lesson 12: Word Boundaries            →  \b matches word edges
-Lesson 13: Alternation                →  Match this OR that
-Lesson 14: Grouping                   →  Combine patterns
-Lesson 15: Escaping Special Chars     →  Match literal . ? * etc.
-```
-
-### 🟨 Yellow Belt - Real World
-Apply regex to practical challenges and data extraction
-
-```
-Lesson 16: Extract IPv4 Addresses     →  Parse server logs
-Lesson 17: Extract Email Addresses    →  Find emails in text
-Lesson 18: Extract URLs               →  Match HTTP/HTTPS links
-Lesson 19: Parse Dates                →  MM/DD/YYYY format
-Lesson 20: Extract Phone Numbers      →  US XXX-XXX-XXXX format
-Lesson 21: Extract Hashtags           →  Social media tags
-Lesson 22: Parse Hex Colors           →  #RGB and #RRGGBB
-```
+The full lesson list lives on the website so the README stays lean. Run `regkata` to see the catalog in the CLI.
 
 ## Development
-
-Clone and install dependencies:
 
 ```bash
 git clone https://github.com/JR-G/regkata.git
@@ -100,22 +51,22 @@ cd regkata
 bun install
 ```
 
-Run in development mode:
-
 ```bash
 bun run dev
 ```
-
-Type checking:
 
 ```bash
 bun run typecheck
 ```
 
-Build for production:
-
 ```bash
 bun run build
+```
+
+## Tests
+
+```bash
+bun run test
 ```
 
 ## License

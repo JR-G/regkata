@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Box, Text } from 'ink';
+import { useEffect, useState } from 'react';
+import { Box, Text, useStdout } from 'ink';
 import SelectInput from 'ink-select-input';
 import { ShimmerText } from './ShimmerText.js';
 import { lessons, getLesson } from '../lessons/index.js';
@@ -19,6 +19,7 @@ type MenuItem = {
 export const Menu = ({ onSelectLesson, onExit }: MenuProps) => {
   const progress = getProgress();
   const [showAll, setShowAll] = useState(false);
+  const { stdout } = useStdout();
 
   const nextLesson = lessons.find(
     lesson => !progress.completedLessons.includes(lesson.id)
@@ -26,6 +27,7 @@ export const Menu = ({ onSelectLesson, onExit }: MenuProps) => {
 
   const whiteBeltLessons = lessons.filter(lesson => lesson.belt === 'white');
   const yellowBeltLessons = lessons.filter(lesson => lesson.belt === 'yellow');
+  const orangeBeltLessons = lessons.filter(lesson => lesson.belt === 'orange');
 
   const items: MenuItem[] = showAll
     ? [
@@ -36,6 +38,12 @@ export const Menu = ({ onSelectLesson, onExit }: MenuProps) => {
           value: `lesson-${lesson.id}`,
         })),
         ...yellowBeltLessons.map(lesson => ({
+          label: `${lesson.id}. ${lesson.title} ${
+            progress.completedLessons.includes(lesson.id) ? '✓' : ''
+          }`,
+          value: `lesson-${lesson.id}`,
+        })),
+        ...orangeBeltLessons.map(lesson => ({
           label: `${lesson.id}. ${lesson.title} ${
             progress.completedLessons.includes(lesson.id) ? '✓' : ''
           }`,
@@ -81,6 +89,14 @@ export const Menu = ({ onSelectLesson, onExit }: MenuProps) => {
     }
   };
 
+  useEffect(() => {
+    if (showAll && stdout?.isTTY) {
+      stdout.write('\x1b[2J\x1b[H');
+    }
+  }, [showAll, stdout]);
+
+  const selectKey = showAll ? 'all' : 'main';
+
   return (
     <Box flexDirection="column" padding={1}>
       <Box marginBottom={1}>
@@ -102,9 +118,13 @@ export const Menu = ({ onSelectLesson, onExit }: MenuProps) => {
             <Text bold color="yellow">Yellow Belt - Real World</Text>
           </Box>
           <Text color="gray">Lessons 16-22: Practical applications</Text>
+          <Box marginTop={1}>
+            <Text bold color="#ff7a1a">Orange Belt - Advanced</Text>
+          </Box>
+          <Text color="gray">Lessons 23-26: Pattern fluency</Text>
         </Box>
       )}
-      <SelectInput items={items} onSelect={handleSelect} />
+      <SelectInput key={selectKey} items={items} onSelect={handleSelect} initialIndex={0} />
     </Box>
   );
 };

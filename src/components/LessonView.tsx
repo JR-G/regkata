@@ -42,8 +42,18 @@ export const LessonView = ({ lesson, onComplete, onExit }: LessonViewProps) => {
     }
   };
 
-  const beltColor = lesson.belt === 'white' ? 'cyan' : 'yellow';
-  const beltLabel = lesson.belt === 'white' ? 'White Belt' : 'Yellow Belt';
+  const beltColor =
+    lesson.belt === 'white'
+      ? 'cyan'
+      : lesson.belt === 'yellow'
+        ? 'yellow'
+        : '#ff7a1a';
+  const beltLabel =
+    lesson.belt === 'white'
+      ? 'White Belt'
+      : lesson.belt === 'yellow'
+        ? 'Yellow Belt'
+        : 'Orange Belt';
 
   return (
     <Box flexDirection="column" padding={1}>

@@ -70,7 +70,7 @@ const structuredData = {
 					<div class="welcome-text">
 						<h1>Master Regular Expressions Through Practice</h1>
 						<p class="subtitle">Learn regex like a martial artist—through deliberate practice and progressive challenges.</p>
-						<p class="tagline">22 interactive lessons • Real-time validation • Progress tracking • Beautiful CLI</p>
+						<p class="tagline">26 interactive lessons • Real-time validation • Progress tracking • Beautiful CLI</p>
 					</div>
 
 					<div class="quick-commands">
@@ -82,6 +82,7 @@ const structuredData = {
 							<button class="cmd-btn" data-command="install">$ install</button>
 							<button class="cmd-btn" data-command="white-belt">$ white-belt</button>
 							<button class="cmd-btn" data-command="yellow-belt">$ yellow-belt</button>
+							<button class="cmd-btn" data-command="orange-belt">$ orange-belt</button>
 						</div>
 					</div>
 
@@ -111,6 +112,7 @@ const structuredData = {
 				--cyan: #00d9ff;
 				--green: #00ff9f;
 				--yellow: #ffbe0b;
+				--orange: #ff7a1a;
 				--bg: #0a0a0f;
 				--terminal-bg: #1a1a2e;
 				--terminal-header-bg: #16161f;
@@ -119,6 +121,7 @@ const structuredData = {
 				--border: #2a2a3e;
 				--red-control: #ff5f56;
 				--yellow-control: #ffbd2e;
+				--orange-control: #ff9a3d;
 				--green-control: #27c93f;
 			}
 
@@ -426,11 +429,17 @@ const structuredData = {
 					"20. Extract Phone Numbers → US XXX-XXX-XXXX format",
 					"21. Extract Hashtags → Social media tags",
 					"22. Parse Hex Colors → #RGB and #RRGGBB"
+				],
+				orangeBelt: [
+					"23. Repeated Words → Backreference practice",
+					"24. Quoted Strings → Text inside double quotes",
+					"25. US ZIP Codes → 12345 or 12345-6789",
+					"26. 24-Hour Time → 09:05 or 23:59"
 				]
 			};
 
 			const FEATURES = [
-				"✨ 22 Progressive Lessons - From fundamentals to real-world applications",
+				"✨ 26 Progressive Lessons - From fundamentals to real-world applications",
 				"🎯 Real-time Validation - Test your regex against multiple cases instantly",
 				"💾 Progress Tracking - Pick up exactly where you left off",
 				"💡 Hint System - Type ? for guidance on any lesson",
@@ -440,9 +449,10 @@ const structuredData = {
 
 			const HELP_ITEMS = [
 				"help - Show this help message",
-				"lessons - View all 22 lessons",
+				"lessons - View all 26 lessons",
 				"white-belt - View White Belt (Fundamentals) lessons",
 				"yellow-belt - View Yellow Belt (Real World) lessons",
+				"orange-belt - View Orange Belt (Advanced) lessons",
 				"features - View key features",
 				"install - Get installation instructions",
 				"github - Open GitHub repository",
@@ -462,6 +472,7 @@ const structuredData = {
 				lessons: () => `
 					${renderSection('⬜ White Belt - Fundamentals (15 lessons)', renderList(LESSONS.whiteBelt, 'lesson-item'))}
 					${renderSection('🟨 Yellow Belt - Real World (7 lessons)', renderList(LESSONS.yellowBelt, 'lesson-item'))}
+					${renderSection('🟧 Orange Belt - Advanced (4 lessons)', renderList(LESSONS.orangeBelt, 'lesson-item'))}
 				`,
 
 				'white-belt': () => `
@@ -472,6 +483,11 @@ const structuredData = {
 				'yellow-belt': () => `
 					${renderSection('🟨 Yellow Belt - Real World', '<p>Apply regex to practical challenges and data extraction</p>')}
 					${renderList(LESSONS.yellowBelt, 'lesson-item')}
+				`,
+
+				'orange-belt': () => `
+					${renderSection('🟧 Orange Belt - Advanced', '<p>Build pattern fluency with tougher match tasks</p>')}
+					${renderList(LESSONS.orangeBelt, 'lesson-item')}
 				`,
 
 				features: () => renderSection('Why regkata?', renderList(FEATURES, 'feature-item')),

@@ -13,6 +13,7 @@
     "build": "bun build ./src/cli.tsx --outdir ./dist --target node --format esm && chmod +x ./dist/cli.js",
     "dev": "bun run src/cli.tsx",
     "start": "bun run dist/cli.js",
+    "test": "bun test",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [
