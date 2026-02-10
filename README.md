@@ -33,8 +33,8 @@ regkata
 
 ## What you get
 
-- 26 lessons, ordered from fundamentals to practical patterns
-- White Belt fundamentals, Yellow Belt real‑world patterns, Orange Belt advanced drills
+- 36 lessons, ordered from fundamentals to advanced pattern design
+- White Belt fundamentals, Yellow Belt real-world patterns, Orange Belt advanced drills, Blue Belt expert challenges
 - Instant feedback against multiple test cases
 - Progress saved between sessions
 - Clean, readable CLI built with Ink
