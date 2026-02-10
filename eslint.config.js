@@ -14,7 +14,6 @@ export default tseslint.config(
       globals: {
         ...globals.node,
         ...globals.es2024,
-        console: "readonly",
         Bun: "readonly",
         describe: "readonly",
         expect: "readonly",

@@ -39,4 +39,4 @@ git push -u origin "$branch"
 gh pr create --title "v$version" --body "Bump version to $version" --auto --rebase
 
 echo "Created release PR for v$version"
-echo "After merge, run: bun run release:tag $version"
+echo "After merge, run: bun run release:tag"

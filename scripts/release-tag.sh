@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if ! git diff --quiet HEAD; then
+  echo "Error: working tree is not clean"
+  exit 1
+fi
+
 git checkout main
 git pull
 
