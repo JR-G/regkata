@@ -23,7 +23,6 @@ export const markLessonComplete = (lessonId: number): void => {
 };
 
 export const getNextUncompletedLesson = (): number => {
-  const completed = config.get('completedLessons', []);
   const lastLesson = config.get('lastLesson', 0);
   return lastLesson + 1;
 };
