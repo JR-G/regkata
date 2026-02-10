@@ -60,7 +60,15 @@ bun run typecheck
 ```
 
 ```bash
+bun run lint
+```
+
+```bash
 bun run build
+```
+
+```bash
+bun run check
 ```
 
 ## Tests
@@ -68,6 +76,22 @@ bun run build
 ```bash
 bun run test
 ```
+
+## Releases
+
+Create a release PR with a semver bump:
+
+```bash
+bun run release patch
+```
+
+After that PR is merged to `main`, tag and publish:
+
+```bash
+bun run release:tag
+```
+
+Publishing is handled by GitHub Actions on `v*` tags.
 
 ## License
 
