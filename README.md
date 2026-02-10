@@ -42,6 +42,7 @@ regkata
 ## Lessons
 
 The full lesson list lives on the website so the README stays lean. Run `regkata` to see the catalog in the CLI.
+If you are contributing lessons, use `docs/lessons.md` for the authoring rules and checklist.
 
 ## Development
 
