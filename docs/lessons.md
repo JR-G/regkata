@@ -18,7 +18,7 @@
 1. Add lesson to `src/lessons/index.ts` with the next sequential `id`.
 2. Include edge cases in test cases, not only happy paths.
 3. Keep lesson prompt and hint aligned with the expected regex concept.
-4. Run `bun run check` before opening a PR.
+4. Run `bun run test` and `bun run typecheck` before opening a PR.
 
 ## Validation gates
 
