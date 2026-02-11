@@ -1,6 +1,7 @@
 import type { Lesson } from '../types.js';
+import { defineLessonCatalog } from './framework.js';
 
-export const lessons: readonly Lesson[] = [
+export const lessons: readonly Lesson[] = defineLessonCatalog([
   {
     id: 1,
     title: 'Literal Characters',
@@ -417,7 +418,7 @@ export const lessons: readonly Lesson[] = [
     hint: 'Hours 00-23 and minutes 00-59',
     solution: '\\b([01]\\d|2[0-3]):[0-5]\\d\\b',
   },
-] as const;
+] as const);
 
 export const getLesson = (id: number): Lesson | undefined =>
   lessons.find(lesson => lesson.id === id);
