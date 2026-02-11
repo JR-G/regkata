@@ -24,10 +24,12 @@ const assertTestCases = (lesson: Lesson): void => {
       fail(`lesson ${lesson.id} test case ${caseIndex + 1} input must be a string`);
     }
 
-    if (testCase.shouldMatch) {
+    if (testCase.shouldMatch === true) {
       hasPositive = true;
-    } else {
+    } else if (testCase.shouldMatch === false) {
       hasNegative = true;
+    } else {
+      fail(`lesson ${lesson.id} test case ${caseIndex + 1} shouldMatch must be boolean`);
     }
   });
 

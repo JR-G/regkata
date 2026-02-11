@@ -40,6 +40,19 @@ describe("defineLessonCatalog", () => {
     expect(() => defineLessonCatalog([lesson])).toThrow("must include both matching and non-matching");
   });
 
+  test("rejects lessons with only negative test cases", () => {
+    const lesson: Lesson = {
+      ...validLesson(1),
+      solution: "zzz",
+      testCases: [
+        { input: "abc", shouldMatch: false },
+        { input: "xyz", shouldMatch: false },
+        { input: "123abc", shouldMatch: false }
+      ]
+    };
+    expect(() => defineLessonCatalog([lesson])).toThrow("must include both matching and non-matching");
+  });
+
   test("rejects invalid solutions", () => {
     const lesson: Lesson = { ...validLesson(1), solution: "xyz" };
     expect(() => defineLessonCatalog([lesson])).toThrow(
