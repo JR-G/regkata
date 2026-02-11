@@ -1,5 +1,5 @@
 export type LessonType = 'match' | 'capture' | 'replace';
-export type Belt = 'white' | 'yellow' | 'orange';
+export type Belt = 'white' | 'yellow' | 'orange' | 'green';
 
 export interface TestCase {
   readonly input: string;
