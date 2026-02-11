@@ -12,7 +12,7 @@ This project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Dependabot configuration for GitHub Actions, root dependencies, and website dependencies.
 - ESLint configuration, pre-push hooks, and scripted release tooling.
 - Changelog and release process documentation updates.
-- Blue Belt lesson tier with 10 advanced regex lessons (lookarounds, named groups, and validation patterns).
+- Green Belt lesson tier with 10 advanced regex lessons (lookarounds, named groups, and validation patterns).
 
 ## [1.2.0] - 2026-01-29
 

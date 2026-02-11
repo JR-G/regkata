@@ -423,7 +423,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Lazy Quantifiers',
     description: 'Match the shortest double-quoted string',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: '"hi"', shouldMatch: true },
       { input: 'say "hello" then "bye"', shouldMatch: true },
@@ -439,7 +439,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Positive Lookahead',
     description: 'Match "foo" only when it is immediately followed by "bar"',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: 'foobar', shouldMatch: true },
       { input: 'foo bar', shouldMatch: false },
@@ -455,7 +455,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Negative Lookahead',
     description: 'Match "cat" only when it is NOT followed by "s"',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: 'cat', shouldMatch: true },
       { input: 'cats', shouldMatch: false },
@@ -471,7 +471,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Positive Lookbehind',
     description: 'Match numbers that come immediately after a dollar sign',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: '$19', shouldMatch: true },
       { input: 'Total: $250.00', shouldMatch: true },
@@ -487,7 +487,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Negative Lookbehind',
     description: 'Match "bar" only when it is NOT immediately preceded by "foo"',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: 'bar', shouldMatch: true },
       { input: 'foobar', shouldMatch: false },
@@ -503,7 +503,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Named Capture Groups',
     description: 'Match phone numbers like 415-555-1212 using named groups',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: 'Call 415-555-1212 now', shouldMatch: true },
       { input: 'Emergency: 800-123-0000', shouldMatch: true },
@@ -519,7 +519,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Line-Aware Matching',
     description: 'Match log lines that begin with "ERROR:" in multi-line text',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: 'ERROR: disk full', shouldMatch: true },
       { input: 'INFO: ready\nERROR: timeout\nINFO: retry', shouldMatch: true },
@@ -535,7 +535,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Optional Country Code',
     description: 'Match full US numbers with optional +1 country code',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: '+1 415-555-1212', shouldMatch: true },
       { input: '415-555-1212', shouldMatch: true },
@@ -551,7 +551,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'Balanced HTML Tags',
     description: 'Match matching open/close HTML tags like <b>text</b>',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: '<b>bold</b>', shouldMatch: true },
       { input: '<div>hello</div>', shouldMatch: true },
@@ -567,7 +567,7 @@ export const lessons: readonly Lesson[] = defineLessonCatalog([
     title: 'ISO Date Validation',
     description: 'Match dates like 2026-02-10 with basic month/day ranges',
     type: 'match',
-    belt: 'blue',
+    belt: 'green',
     testCases: [
       { input: '2026-02-10', shouldMatch: true },
       { input: '1999-12-31', shouldMatch: true },

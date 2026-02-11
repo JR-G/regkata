@@ -8,7 +8,7 @@ const beltOrder: Record<Belt, number> = {
   white: 1,
   yellow: 2,
   orange: 3,
-  blue: 4,
+  green: 4,
 };
 
 describe('lessons catalog', () => {
